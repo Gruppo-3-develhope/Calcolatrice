@@ -1,4 +1,4 @@
-public class es1gruppo3 {
+public class moltiplicazione {
     public static void main(String[] args){
         int x=5;
         int y=10;
