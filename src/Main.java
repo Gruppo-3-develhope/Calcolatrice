@@ -54,5 +54,4 @@ public class Main {
     public static boolean isPari (int result) {
         return result % 2 == 0;
     }
-
 }
