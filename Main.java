@@ -9,12 +9,12 @@ public class Main {
         System.out.println("Operation: " + x + " " + calc + " " + y);
         System.out.println("Type of operation: " + operation(calc));
 
-        Calcolatrice calcolatrice = new Calcolatrice(x, y, calc);
-        calcolatrice.setX(10);
-        calcolatrice.setY(2);
-        calcolatrice.setCalc('/');
+        Division division = new Division(x, y, calc);
+        division.setX(10);
+        division.setY(2);
+        division.setCalc('/');
 
-        int result = calcolatrice.risolviOperazione();
+        int result = division.solveOperation();
         System.out.println("Result: " + result);
 
         if (isPari(result)) {
