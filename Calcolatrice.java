@@ -1,9 +1,9 @@
-public class Calcolatrice {
+public class Sum {
         private int x;
         private int y;
         private char calc;
 
-        public Calcolatrice(int x, int y, char calc) {
+        public Sum(int x, int y, char calc) {
             this.x = x;
             this.y = y;
             this.calc = calc;
@@ -30,7 +30,7 @@ public class Calcolatrice {
             this.calc = newCalc;
         }
 
-    public int risolviOperazione() {
+    public int solveOperation() {
         int result = 0;
         switch (calc) {
             case '+':
