@@ -9,7 +9,7 @@ public class Main {                                                             
             System.out.println("Operation: " + x + " " + calc + " " + y);
             System.out.println("Type of operation: " + operation(calc));
 
-            Subtraction subtracion = new Subtraction(x, y, calc);                  // costruttore classe somma
+            Subtraction subtracion = new Subtraction(x, y, calc);                  // costruttore classe sottrazione
             subtracion.setX(10);
             subtracion.setY(2);
             subtracion.setCalc('-');
