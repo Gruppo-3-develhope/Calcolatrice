@@ -1,57 +1,60 @@
-public class Power {                                                                // creo la classe Main
-    public static void main (String[] args) {
+public class Power {                                       // creo la calsse Power
+    private int x;                                         // imposto le variabili degli operatori e del carattere
+    private int y;
+    private char calc;
 
-        int x = 10;                                                                 // imposto due numeri int come operandi
-        int y = 2;
-        char calc = '^';                                                            // scelgo un carattere del simbolo dell'operazione (in questo caso potenza)
-
-        System.out.println("Input values: " + x + " , " + y);                       // stampo i valori di input
-        System.out.println("Operation: " + x + " " + calc + " " + y);
-        System.out.println("Type of operation: " + operation(calc));
-
-        Power power = new Power(x, y, calc);                                        // costruttore classe potenza
-        power.setX(10);
-        power.setCalc('^');
-        power.setY(2);
-
-        double result = power.solveOperation();                                     // soluzione e stampo il risultato in terminale
-        System.out.println("Result: " + result);
-
-        if (isEven(result)) {                                                       // controllo se il risultato e' pari o dipari e lo stampo in terminale
-            System.out.println(result + " = even");
-        } else {
-            System.out.println(result + " = odd");
-        }
-
+    public Power (int x, int y, char calc) {               // creo l'oggetto Power, getter e setter delle variabili
+        this.x = x;
+        this.y = y;
+        this.calc = calc;
     }
 
+    public int getX() {
+        return x;
+    }
+    public void setX(int newX) {
+        this.x = newX;
+    }
 
-    public static String operation (char calc) {                                // metodo per conrollare se l'operazione e' una somma, sottrazione,
-                                                                                // moltiplicazione, divisione o potenza
-        String opType;
+    public int getY () {
+        return x;
+    }
+    public void setY (int newY) {
+        this.y = newY;
+    }
+
+    public char getCalc () {
+        return calc;
+    }
+    public void setCalc (char newCalc) {
+        this.calc = newCalc;
+    }
+
+    public double solveOperation() {                                                 // risolvo l'operazione
+        double result = 0;
         switch (calc) {
             case '+':
-                opType = "sum";
+                result = x + y;
                 break;
             case '-':
-                opType = "subtraction";
+                result = x - y;
                 break;
             case '*':
-                opType = "multiplication";
+                result = x * y;
                 break;
             case '/':
-                opType = "division";
+                if (y != 0) {
+                    result = x / y;
+                } else {
+                    System.out.println("Impossible to divide by zero.");
+                }
                 break;
-            case '^' :
-                opType = "power";
+            case '^':
+                result = Math.pow(x, y);
                 break;
             default:
-                opType = "error: invalid char";
+                System.out.println("Invaild operation.");
         }
-        return opType;
-    }
-
-    public static boolean isEven (double result) {                                // metodo per controllare se il risultato e' pari o dispari
-        return result % 2 == 0;
+        return result;
     }
 }
