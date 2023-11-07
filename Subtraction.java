@@ -1,9 +1,9 @@
-public class Subtraction {                                       // creo la calsse Sum
-    private int x;                                       // imposto le variabili degli operatori e del carattere
+public class Subtraction {                                       // creo la classe Subtraction
+    private int x;                                               // imposto le variabili degli operatori e del carattere
     private int y;
     private char calc;
 
-    public Subtraction(int x, int y, char calc) {                // creo l'oggetto Sum, getter e setter delle variabili
+    public Subtraction(int x, int y, char calc) {                // creo l'oggetto Subtraction, getter e setter delle variabili
         this.x = x;
         this.y = y;
         this.calc = calc;
