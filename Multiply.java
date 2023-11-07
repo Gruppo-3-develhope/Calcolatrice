@@ -1,10 +1,10 @@
-public class Calcolatrice {                                                    // creo la classe Clacolatrice, dove ho gli oggetti x, y e calc,
+public class Multiply {                                                    // creo la classe Clacolatrice, dove ho gli oggetti x, y e calc,
     // creo i getter e i setter
     private int x;
     private int y;
     private char calc;
 
-    public Calcolatrice(int x, int y, char calc) {
+    public Multiply(int x, int y, char calc) {
         this.x = x;
         this.y = y;
         this.calc = calc;
@@ -31,7 +31,7 @@ public class Calcolatrice {                                                    /
         this.calc = newCalc;
     }
 
-    public int risolviOperazione() {                                                              // la mia "calcolatrice" che risolve l'operazione tra x e y;
+    public int solveOperation() {                                                              // la mia "calcolatrice" che risolve l'operazione tra x e y;
         int result = 0;                                                                           // uso switch per vedere se l'operazione e' una somma, sottrazione,
         switch (calc) {                                                                           // moltiplicazione, divisione o potenza e risolvo l'operazione
             case '+':
