@@ -1,5 +1,7 @@
-public class Multiply {                                                    // creo la classe Clacolatrice, dove ho gli oggetti x, y e calc,
-    // creo i getter e i setter
+package gruppo;
+
+public class Multiply {
+
     private int x;
     private int y;
     private char calc;
@@ -31,9 +33,9 @@ public class Multiply {                                                    // cr
         this.calc = newCalc;
     }
 
-    public int solveOperation() {                                                              // la mia "calcolatrice" che risolve l'operazione tra x e y;
-        int result = 0;                                                                           // uso switch per vedere se l'operazione e' una somma, sottrazione,
-        switch (calc) {                                                                           // moltiplicazione, divisione o potenza e risolvo l'operazione
+    public int risolviOperazione() {
+        int result = 0;
+        switch (calc) {
             case '+':
                 result = x + y;
                 break;
@@ -53,8 +55,7 @@ public class Multiply {                                                    // cr
             case '^':
                 result = x ^ y;
                 break;
-            default:                                                                               // se si inserisce un carattere sbagliato stampo l'errore
-                System.out.println("Invaild operation.");
+            default:
         }
         return result;
     }

@@ -1,23 +1,27 @@
-public class Main {                                                             // creo la classe Main
+package gruppo;
+
+import gruppo.Multiply;
+
+public class Main {
     public static void main (String[] args) {
 
-        int x = 10;                                                            // imposto due numeri int come operandi
+        int x = 10;
         int y = 2;
-        char calc = '*';                                                       // scelgo un carattere del simbolo dell'operazione (in questo caso moltilicazione)
+        char calc = '*';
 
-        System.out.println("Input values: " + x + " , " + y);                  // stampo i valori di input
+        System.out.println("Input values: " + x + " , " + y);
         System.out.println("Operation: " + x + " " + calc + " " + y);
         System.out.println("Type of operation: " + operation(calc));
 
-        Multiply multiply = new Multiply(x, y, calc);                                         // costruttore classe somma
+        Multiply multiply = new Multiply(x, y, calc);
         multiply.setX(10);
         multiply.setY(2);
         multiply.setCalc('*');
 
-        int result = sum.solveOperation();                                     // soluzione e stampo il risultato in terminale
+        int result = multiply.risolviOperazione();
         System.out.println("Result: " + result);
 
-        if (isEven(result)) {                                                  // controllo se il risultato e' pari o dipari e lo stampo in terminale
+        if (isPari(result)) {
             System.out.println(result + " = even");
         } else {
             System.out.println(result + " = odd");
@@ -26,8 +30,8 @@ public class Main {                                                             
     }
 
 
-    public static String operation (char calc) {                                // metodo per conrollare se l'operazione e' una somma, sottrazione,
-        // moltiplicazione, divisione o potenza
+    public static String operation (char calc) {
+
         String opType;
         switch (calc) {
             case '+':
@@ -51,7 +55,7 @@ public class Main {                                                             
         return opType;
     }
 
-    public static boolean isEven (int result) {                                // metodo per controllare se il risultato e' pari o dispari
+    public static boolean isPari (int result) {                             // metodo per controllae se il risutato dell'oprerazione e' pari o dispari
         return result % 2 == 0;
     }
 }
