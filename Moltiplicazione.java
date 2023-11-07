@@ -1,40 +1,61 @@
-public class Moltiplicazione {
-    public static void main (String[] args) {
-        int x = 2;
-        int y = 4;
-        char calc = '*';
-        System.out.println("Input values: " + x + " , " + y);
-        String opType = operation(calc);
+public class Calcolatrice {                                                    // creo la classe Clacolatrice, dove ho gli oggetti x, y e calc,
+    // creo i getter e i setter
+    private int x;
+    private int y;
+    private char calc;
 
-        System.out.println("Operation type: " + opType + " ( " + calc + " )");
-        System.out.println("Result of the operation: " + multiply(x, y));
+    public Calcolatrice(int x, int y, char calc) {
+        this.x = x;
+        this.y = y;
+        this.calc = calc;
     }
-    public static String operation (char calc) {
 
-        String opType;
-        switch (calc) {
+    public int getX() {
+        return x;
+    }
+    public void setX(int newX) {
+        this.x = newX;
+    }
+
+    public int getY () {
+        return x;
+    }
+    public void setY (int newY) {
+        this.y = newY;
+    }
+
+    public char getCalc () {
+        return calc;
+    }
+    public void setCalc (char newCalc) {
+        this.calc = newCalc;
+    }
+
+    public int risolviOperazione() {                                                              // la mia "calcolatrice" che risolve l'operazione tra x e y;
+        int result = 0;                                                                           // uso switch per vedere se l'operazione e' una somma, sottrazione,
+        switch (calc) {                                                                           // moltiplicazione, divisione o potenza e risolvo l'operazione
             case '+':
-                opType = "sum";
+                result = x + y;
                 break;
             case '-':
-                opType = "subtraction";
+                result = x - y;
                 break;
             case '*':
-                opType = "multiplication";
+                result = x * y;
                 break;
             case '/':
-                opType = "division";
+                if (y != 0) {
+                    result = x / y;
+                } else {
+                    System.out.println("Impossible to divide by zero.");
+                }
                 break;
-            case '^' :
-                opType = "power";
+            case '^':
+                result = x ^ y;
                 break;
-            default:
-                opType = "error: invalid char";
+            default:                                                                               // se si inserisce un carattere sbagliato stampo l'errore
+                System.out.println("Invaild operation.");
         }
-        return opType;
-    }
-    public static int multiply(int number1, int number2) {
-        int mult = number1 * number2;
-        return mult;
+        return result;
     }
 }
