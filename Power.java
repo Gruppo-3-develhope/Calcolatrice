@@ -1,9 +1,9 @@
-public class Power {                                       // creo la calsse Sum
-    private int x;                                       // imposto le variabili degli operatori e del carattere
+public class Power {                                       // creo la classe Power
+    private int x;                                         // imposto le variabili degli operatori e del carattere
     private int y;
     private char calc;
 
-    public Power (int x, int y, char calc) {                // creo l'oggetto Sum, getter e setter delle variabili
+    public Power (int x, int y, char calc) {                // creo l'oggetto Power, getter e setter delle variabili
         this.x = x;
         this.y = y;
         this.calc = calc;
