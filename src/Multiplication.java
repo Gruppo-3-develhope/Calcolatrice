@@ -10,7 +10,8 @@ public class Multiplication {
             this.calc = calc;
         }
 
-        public int risolviOperazione() {
+        @Override
+        public double solveOperation() {
             double result = 0;
             switch (calc) {
                 case '+':
