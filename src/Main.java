@@ -19,7 +19,7 @@ public class Main {
             System.out.println(subResult + " = odd");
         }
 
-        Multipication multipication = new Multipication(2,3,'+');
+        Multipication multipication = new Multipication(2,3,'*');
         double result = multipication.solveOperation();
         System.out.println("Result multipication: " + multiplySolution);
         if (isEven(subResult)) {                                                  // controllo se il risultato e' pari o dipari e lo stampo in terminale
@@ -28,7 +28,7 @@ public class Main {
             System.out.println(subResult + " = odd");
         }
 
-        Division division = new Division(2,3,'+');
+        Division division = new Division(2,3,'/');
         double result = division.solveOperation();
         System.out.println("Result division: " + divisionSolution);
         if (isEven(subResult)) {                                                  // controllo se il risultato e' pari o dipari e lo stampo in terminale
