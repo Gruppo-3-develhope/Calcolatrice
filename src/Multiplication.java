@@ -1,38 +1,17 @@
 public class Multiplication {
 
-        private int x;
-        private int y;
+        private double x;
+        private double y;
         private char calc;
 
-        public Multiplication(int x, int y, char calc) {
+        public Multiplication(double x, double y, char calc) {
             this.x = x;
             this.y = y;
             this.calc = calc;
         }
 
-        public int getX() {
-            return x;
-        }
-        public void setX(int newX) {
-            this.x = newX;
-        }
-
-        public int getY () {
-            return x;
-        }
-        public void setY (int newY) {
-            this.y = newY;
-        }
-
-        public char getCalc () {
-            return calc;
-        }
-        public void setCalc (char newCalc) {
-            this.calc = newCalc;
-        }
-
         public int risolviOperazione() {
-            int result = 0;
+            double result = 0;
             switch (calc) {
                 case '+':
                     result = x + y;
@@ -51,7 +30,7 @@ public class Multiplication {
                     }
                     break;
                 case '^':
-                    result = x ^ y;
+                    result = Math.pow(x, y);
                     break;
                 default:
             }
