@@ -30,7 +30,7 @@ public class Subtraction extends Calcolatrice {                                 
                 }
                 break;
             case '^':
-                result = x ^ y;
+                result = Math.pow(x, y);
                 break;
             default:
                 System.out.println("Invaild operation.");
