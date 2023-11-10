@@ -3,7 +3,7 @@ public class Power extends Calcolatrice {                                       
     private double y;
     private char calc;
 
-    public Power (double x, double y, char calc) {                              // creo l'oggetto Power, getter e setter delle variabili
+    public Power (double x, double y, char calc) {                              // creo l'oggetto Power
         this.x = x;
         this.y = y;
         this.calc = calc;
