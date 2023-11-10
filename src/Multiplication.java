@@ -1,10 +1,10 @@
-public class Multiply {
+public class Multiplication {
 
         private int x;
         private int y;
         private char calc;
 
-        public Multiply(int x, int y, char calc) {
+        public Multiplication(int x, int y, char calc) {
             this.x = x;
             this.y = y;
             this.calc = calc;
