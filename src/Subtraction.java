@@ -1,9 +1,9 @@
-public class Subtraction extends Calcolatrice {                                       // creo la calsse Power
-    private double x;                                         // imposto le variabili degli operatori e del carattere
+public class Subtraction extends Calcolatrice {                                       // creo la classe Subtraction
+    private double x;                                                                 // imposto le variabili degli operatori e del carattere
     private double y;
     private char calc;
 
-    public Subtraction (double x, double y, char calc) {               // creo l'oggetto Power, getter e setter delle variabili
+    public Subtraction (double x, double y, char calc) {                              // creo l'oggetto Subtraction, getter e setter delle variabili
         this.x = x;
         this.y = y;
         this.calc = calc;
