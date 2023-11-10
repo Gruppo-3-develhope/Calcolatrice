@@ -3,7 +3,7 @@ public class Subtraction extends Calcolatrice {                                 
     private double y;
     private char calc;
 
-    public Subtraction (double x, double y, char calc) {                              // creo l'oggetto Subtraction, getter e setter delle variabili
+    public Subtraction (double x, double y, char calc) {                              // creo l'oggetto Subtraction
         this.x = x;
         this.y = y;
         this.calc = calc;
