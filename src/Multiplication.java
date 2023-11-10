@@ -1,4 +1,4 @@
-public class Multiplication {
+public class Multiplication extends Calcolatrice {
 
         private double x;
         private double y;
