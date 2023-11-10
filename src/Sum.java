@@ -1,9 +1,9 @@
-public class Sum extends Calcolatrice {
+public class Sum extends Calcolatrice {                       // creo la classe Sum
     private double x;                                         // imposto le variabili degli operatori e del carattere
     private double y;
     private char calc;
 
-    public Sum (double x, double y, char calc) {               // creo l'oggetto Somma, getter e setter delle variabili
+    public Sum (double x, double y, char calc) {               // creo l'oggetto Sum
         this.x = x;
         this.y = y;
         this.calc = calc;
